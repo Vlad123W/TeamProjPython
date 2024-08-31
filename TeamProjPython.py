@@ -11,7 +11,7 @@ def findSomeLetter(target):
 
 
 def getFullInfo(character):
-    return "{repitions} repitions. Unocode code {unicode}".format(repitions = findSomeLetter(character), unicode = ord(character))
+    return "[Target: '{target}'; Repitions: {repitions}; Unicode: {unicode}]".format(target = character, repitions = findSomeLetter(character), unicode = ord(character))
 
 
 #Text for manipulations
@@ -21,4 +21,6 @@ someText = ("English culture is a rich tapestry woven from centuries of history,
 "English customs, such as afternoon tea and the love for cricket, reflect a unique blend of formality and leisure. "
 "The countryside, with its rolling hills and quaint villages, embodies the idyllic charm that has inspired poets and artists alike.")
 
-print(getFullInfo('i'))
+print(getFullInfo('y'))
+
+#Next task is to extract any substring and count uppercase letters printing full information about each of them
