@@ -24,3 +24,4 @@ someText = ("English culture is a rich tapestry woven from centuries of history,
 print(getFullInfo('y'))
 
 #Next task is to extract any substring and count uppercase letters printing full information about each of them
+#Konoplenko KN-33-1
