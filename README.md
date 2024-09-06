@@ -1,1 +1,1 @@
-This project is meant to be usend only in educational purposes
+This project is meant to be used only in educational purposes
