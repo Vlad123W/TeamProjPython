@@ -24,6 +24,7 @@ someText = ("English culture is a rich tapestry woven from centuries of history,
 
 print(getFullInfo('y'))
 
+#       ↑
 #Konoplenko KN-33-1
 
 result=string.capwords(someText)
@@ -34,4 +35,5 @@ print("-----")
 result=someText.replace('English', 'Ukraine')
 print(result)
 
+#       ↑
 #Duzhak Ivan KN-33-1
