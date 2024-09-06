@@ -1,6 +1,7 @@
 
 from itertools import count
 from operator import concat
+import string
 
 def findSomeLetter(target):
     counter = 0;
@@ -23,5 +24,14 @@ someText = ("English culture is a rich tapestry woven from centuries of history,
 
 print(getFullInfo('y'))
 
-#Next task is to extract any substring and count uppercase letters printing full information about each of them
 #Konoplenko KN-33-1
+
+result=string.capwords(someText)
+print(result)
+print("-----")
+print(someText.isdigit())
+print("-----")
+result=someText.replace('English', 'Ukraine')
+print(result)
+
+#Duzhak Ivan KN-33-1
