@@ -37,3 +37,16 @@ print(result)
 
 #       ↑
 #Duzhak Ivan KN-33-1
+
+someText = someText.lower()
+someText = someText.replace(',', ' ').replace('.', ' ')
+print("\n")
+print(someText)
+print("\n")
+words = someText.split()
+unique_words = set(words)
+print(f"Загальна кількість слів: {len(words)}")
+print(f"Кількість унікальних слів: {len(unique_words)}")
+
+#       ↑
+#Konyk Vlad KN-31-1
