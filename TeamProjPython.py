@@ -1,4 +1,4 @@
-def Print(students):
+def Print(students):#Функція, яка виводить словник
     for student in students:
         print(f"Group number: {student['group_number']}")
         print(f"Full name: {student['full_name']}")
@@ -8,7 +8,7 @@ def Print(students):
             print(f"  - {subject}: {grade}")
         print()
 
-def add_student(students_list, new_student):
+def add_student(students_list, new_student):#Функція, яка додає до словника нового студента та виводить словник
     students_list.append(new_student)
     Print(students)
 
