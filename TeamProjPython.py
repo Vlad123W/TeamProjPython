@@ -1,4 +1,5 @@
-def Print(students):#Функція, яка виводить словник
+#Функція, яка виводить словник
+def Print(students):
     for student in students:
         print(f"Group number: {student['group_number']}")
         print(f"Full name: {student['full_name']}")
@@ -8,9 +9,27 @@ def Print(students):#Функція, яка виводить словник
             print(f"  - {subject}: {grade}")
         print()
 
-def add_student(students_list, new_student):#Функція, яка додає до словника нового студента та виводить словник
+#Функція, яка додає до словника нового студента та виводить словник
+def add_student(students_list, new_student):
     students_list.append(new_student)
     Print(students)
+
+#Функція, яка створює нового студента
+def new_student(group, full_name, course, grade_1, grade_2, grade_3, grade_4):
+ new_student = {
+ "group_number": group,
+ "full_name": full_name,
+ "course": course,
+ "subjects": {
+     "Algorithms and data structures": grade_1,
+     "MMDO": grade_2,
+     "Python programming": grade_3,
+     "Numerical methods": grade_4
+ }
+}
+
+ return new_student
+
 
 students = [
     {
@@ -70,23 +89,19 @@ students = [
     },
  ]  
 
-new_student = {
- "group_number": "КН-37",
- "full_name": "Wise Olga Yaroslavivna",
- "course": 3,
- "subjects": {
-     "Algorithms and data structures": 91,
-     "MMDO": 95,
-     "Python programming": 97,
-     "Numerical methods": 99
- }
-}
-
 def case1():
     return Print(students)
 
 def case2():
-    return add_student(students, new_student)
+    group = input("Enter the group -> ")
+    full_name = input("Enter full name -> ")
+    course = int(input("Enter the course -> "))
+    grade_1 = int(input("Enter grade 1 -> "))
+    grade_2 = int(input("Enter grade 2 -> "))
+    grade_3 = int(input("Enter grade 3 -> "))
+    grade_4 = int(input("Enter grade 4 -> "))
+
+    return add_student(students, new_student(group, full_name, course, grade_1, grade_2, grade_3, grade_4))
 
 def default():
     return "Wrong number"
@@ -103,3 +118,27 @@ switch.get(option, default)()
 
 #       ↑
 #Duzhak Ivan KN-33-1
+
+
+
+#Функція сортування списку за іменами 
+def sorting(list):
+    return sorted(students, key=lambda student: student['full_name'])
+
+#Функція сортування за середнім балом 
+def sort_by_average_grade(students):
+    def calculate_average(subjects):
+        return sum(subjects.values()) / len(subjects)
+
+    return sorted(students, key=lambda student: calculate_average(student['subjects']))
+
+#Виклик функції сортування за іменами
+print("Sorted by name students")
+
+sorting(students)
+
+#Вивід відсортованого списку
+Print(students)
+
+#       ↑
+#Vlad Konoplenko KN-33-1
