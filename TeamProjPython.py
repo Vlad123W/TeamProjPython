@@ -142,3 +142,35 @@ Print(students)
 
 #       ↑
 #Vlad Konoplenko KN-33-1
+
+# Функція пошуку студента за ім'ям
+def find_student_by_name(students, name):
+    for student in students:
+        if student['full_name'] == name:
+            return student
+    return None
+
+# Функція видалення студента за ім'ям
+def delete_student_by_name(students, name):
+    student = find_student_by_name(students, name)
+    if student:
+        students.remove(student)
+        print(f"Student {name} has been removed.")
+    else:
+        print(f"Student {name} not found.")
+
+name = input("Enter full name of student to delete -> ")
+delete_student_by_name(students, name)
+
+#Вивід списку після видалення
+Print(students)
+
+name = input("Enter full name of student to find -> ")
+student = find_student_by_name(students, name)
+if student:
+       print(f"Found student: {student['full_name']}, Group: {student['group_number']}, Course: {student['course']}")
+else:
+       print(f"Student {name} not found.")
+
+#       ↑
+#Konyk Vlad KN-31-1
