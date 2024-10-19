@@ -12,15 +12,15 @@ def Open(file_name, mode):
 
 file_name = "Questions.txt"
 
-file_1_w = Open(file_name, "w")
+file_w = Open(file_name, "w")
 
-if file_1_w is not None:
+if file_w is not None:
 
-    file_1_w.write("Konoplenko - What data types are in Python?")
+    file_w.write("Konoplenko - What data types are in Python?")
 
     print(f"Information was successfully added to {file_name}!")
 
-    file_1_w.close()
+    file_w.close()
 
 else:
     print("Error occures while opening the file!")
