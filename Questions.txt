@@ -1,1 +1,4 @@
 Konoplenko - What data types are in Python?
+Duzhak - Python has the following data types: numbers(int, float, complex), lines(str), 
+lists(list, tuple, range), dictionaries(dict), logical(bool), plural(set, frozeenset). 
+How can you read and write data to a file in Python?
